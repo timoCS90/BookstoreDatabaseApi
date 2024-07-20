@@ -1,6 +1,22 @@
-const app = require(`express`)();
-const PORT = 8080;
+import dotenv from "dotenv";
+dotenv.config();
+import express from "express";
+import { MongoClient, ServerApiVersion } from "mongodb";
 
-import mongoose from 'mongoose'
+const app = express();
+const PORT = process.env.PORT || 3000;
+const uri = process.env.MONGODB_URI;
 
-mongoose.connect("mongodb+srv://<username>:<password>@cluster0.eyhty.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+const client = new MongoClient(uri, {
+  serverApi: {
+    version: ServerApiVersion.v1,
+    strict: true,
+    deprecationErrors: true,
+  },
+});
+
+app.use(express.json());
+
+app.listen(PORT, (err) => {
+  if (err) console.error(`Failed to start server: ${err}`);
+});
