@@ -1,0 +1,22 @@
+{
+  "name": "bookstoredatabaseapi",
+  "version": "1.0.0",
+  "description": "Project: Library Management System",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "type": "module"
+}, 
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "6.8",
+    "mongoose": "^8.5.1",
+    "mongosh": "^2.2.12"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  } 
+}
