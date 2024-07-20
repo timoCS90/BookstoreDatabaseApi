@@ -3,11 +3,10 @@
   "version": "1.0.0",
   "description": "Project: Library Management System",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "nodemon index.js"
   },
-  "type": "module"
-}, 
   "keywords": [],
   "author": "",
   "license": "ISC",
